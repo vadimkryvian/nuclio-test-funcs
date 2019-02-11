@@ -1,0 +1,23 @@
+metadata:
+  name: external-dependency-test-func
+  annotations: {}
+spec:
+  description: ""
+  disable: false
+  triggers: {}
+  env: []
+  loggerSinks:
+    - level: debug
+      sink: ""
+  handler: "handler:handler"
+  runtime: "python:2.7"
+  build:
+    commands:
+      - "pip install inflection"
+    image: ""
+    dependencies: []
+    runtimeAttributes:
+      repositories: []
+  targetCPU: 75
+  minReplicas: 1
+  maxReplicas: 1
