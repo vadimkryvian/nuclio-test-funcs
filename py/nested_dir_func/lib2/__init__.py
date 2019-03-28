@@ -1,2 +1,5 @@
 class B(object):
-    pass
+
+    @staticmethod
+    def get_sum(numbers):
+        return sum(numbers)

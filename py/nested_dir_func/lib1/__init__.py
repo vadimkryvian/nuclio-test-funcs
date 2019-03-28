@@ -1,2 +1,5 @@
 class A(object):
-    pass
+
+    @staticmethod
+    def get_nums(event):
+        return event.body.values()
