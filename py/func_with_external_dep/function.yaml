@@ -5,9 +5,6 @@ spec:
   description: ""
   disable: false
   triggers: {}
-  env:
-    - name: 'TEST'
-      value: 'SUCCESS'
   loggerSinks:
     - level: debug
       sink: ""
