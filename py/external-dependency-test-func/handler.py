@@ -1,4 +1,5 @@
 import os
+import inflection
 
 
 def handler(context, event):
