@@ -25,5 +25,6 @@ spec:
     baseImage: "python:3.6-jessie"
     commands:
       - 'touch /tmp/test_file'
+      - 'pip install inflection'
     noCache: false
     offline: false
