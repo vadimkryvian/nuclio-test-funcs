@@ -1,22 +1,29 @@
 metadata:
   name: external-dependency-test-func
-  annotations: {}
+  labels:
+    labelyamlkey: labelyamlval
+  annotations:
+    annotationyamlkey: annotationyamlval
 spec:
-  description: ""
-  disable: false
-  triggers: {}
-  loggerSinks:
-    - level: debug
-      sink: ""
   handler: "handler:handler"
-  runtime: "python:2.7"
-  build:
-    commands:
-      - "pip install inflection"
-    image: ""
-    dependencies: []
-    runtimeAttributes:
-      repositories: []
-  targetCPU: 75
+  runtime: "python:3.6"
+  targetCpu: 45
   minReplicas: 1
   maxReplicas: 1
+  resources: {}
+  disable: false
+  description: "Description from yaml"
+  loggerSinks:
+    - level: debug
+  env:
+    - type: value
+      name: NAIPI_VAR
+      value: naipi_var
+  readinessTimeoutSeconds: 70
+  build:
+    image: yamlimagename
+    baseImage: "python:3.6-jessie"
+    commands:
+      - 'touch /tmp/test_file'
+    noCache: false
+    offline: false
